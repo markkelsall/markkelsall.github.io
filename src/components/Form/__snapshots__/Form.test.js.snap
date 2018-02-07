@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render properly 1`] = `
+<div
+  className="formContainer"
+>
+  <fieldset
+    id="location-fieldset"
+  >
+    <div
+      className="pu-fts-container"
+    >
+      <label
+        htmlFor="ftsAutocomplete"
+      >
+        Pick-up Location
+      </label>
+      <input
+        aria-autocomplete="list"
+        aria-haspopup="true"
+        aria-required="true"
+        autoComplete="off"
+        id="ftsAutocomplete"
+        name="ftsAutocomplete"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="city, airport, station, region, district…"
+        type="text"
+      />
+    </div>
+    <ul
+      aria-activedescendant="ui-active-menuitem"
+      className="ui-autocomplete ui-corner-all hideSearchResults"
+      role="listbox"
+      tabIndex={0}
+    >
+      <li
+        className="ui-menu-item"
+        role="menuitem"
+        tabIndex="-1"
+      >
+        <a
+          className="ui-state-disabled"
+        >
+          <span>
+            No results found
+          </span>
+        </a>
+      </li>
+    </ul>
+  </fieldset>
+</div>
+`;

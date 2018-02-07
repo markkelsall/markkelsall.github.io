@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render properly 1`] = `
+<li
+  className="ui-menu-item"
+  role="menuitem"
+  tabIndex="-1"
+>
+  <a
+    className="ui-corner-all"
+  >
+    <span
+      className="airport type"
+    >
+      airport
+    </span>
+    <div
+      className="location"
+    >
+      <em />
+      <span
+        className="address"
+      >
+        Street
+      </span>
+    </div>
+  </a>
+</li>
+`;

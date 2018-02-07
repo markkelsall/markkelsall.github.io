@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './NoResultItem.css';
+import './NoResultsItem.css';
 
 export default class NoResultsItem extends Component {
 
