@@ -1,0 +1,59 @@
+.ui-autocomplete li a { 
+    color: #222222;
+    border-radius: 2px;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 9px;
+    display: block;
+    display: flex;
+    flex-direction: row;
+}
+
+.ui-autocomplete li :hover { 
+    background-color: #e6f1f9;
+}
+
+.ui-corner-all {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.ui-corner-all a span {
+    min-width: 50px;
+    height: 15px;
+    margin: 2px 10px 0 0;
+    padding: 3px 5px;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 85%;
+}
+
+.airport {
+    background-color: #f2817f;
+}
+
+.city {
+    background-color: #6eb8fa;
+}
+
+.district {
+    background-color: #70d58e;
+}
+
+.type {
+    color: #fff;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+}
+
+.address {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 85%;
+    font-weight: unset !important;
+    color: gray;
+    font-style: normal;
+}

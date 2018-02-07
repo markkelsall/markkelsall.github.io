@@ -1,0 +1,57 @@
+.formContainer {
+    background-color: #F2CD60;
+    width: 48%;
+}
+
+.pu-fts-container {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    color: #444;
+    text-shadow: none;
+    height: 30px;
+    font-size: 0.875em;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+input {
+    padding: 12px 8% 12px 2%;
+    width: 90%;
+    line-height: 15px;
+    font-size: 0.813em;
+    border-color: #a9a9a9;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.pu-fts-loader { 
+    height: 24px;
+    width: 24px;
+    right: 54%;
+    top: 45px;
+    position: absolute;
+}
+
+.ui-autocomplete {
+    box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+    background-color: white;
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.showSearchResults {
+    display: block;
+}
+
+.hideSearchResults {
+    display: none;
+}

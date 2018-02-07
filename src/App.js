@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Route, Switch, withRouter, Redirect} from 'react-router-dom'
+import {connect} from 'react-redux';
+import FormContainer from './components/Form/FormContainer';
+
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+    constructor () {
+        super(...arguments);
+        this.state = {
+            searching: false,
+            searchResults: [],
+            focus: false
+        }
+    }
+
+    render = () => {
+        return (
+            <div className="App">
+                <Switch>
+                    <Redirect exact from="/" to="/rentalcars"/>
+                    <Route path="/rentalcars" component={FormContainer}/>
+                </Switch>
+            </div>
+        );
+    }
 }
 
-export default App;
+export default withRouter(connect()(App))
