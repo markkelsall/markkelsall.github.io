@@ -61,29 +61,27 @@ class FormContainer extends Component {
         }
     }
 
-    render = () => {
-        return (
-            <div className="formContainer">
-                <fieldset id="location-fieldset">
-                    <div className="pu-fts-container">
-                        <label htmlFor="ftsAutocomplete">Pick-up Location</label>
-                        {this.props.searching && <img alt="searching..." className="pu-fts-loader" src={loaderImage}/>}
-                        <input type="text" onChange={this.handleChange} 
-                            onFocus={this.onFocus} onBlur={this.onBlur}
-                            id="ftsAutocomplete" name="ftsAutocomplete"
-                            autoComplete="off" placeholder="city, airport, station, region, district…"
-                            aria-required="true" aria-autocomplete="list" aria-haspopup="true"/>
-                    </div>
-                    <ul className={`ui-autocomplete ui-corner-all ${this.state.focus ? "showSearchResults" : "hideSearchResults"}`} role="listbox" aria-activedescendant="ui-active-menuitem" tabIndex={0}>
-                        {this.props.searchResults.items.length > 0 ?
-                            this.props.searchResults.items.map((item, key) => <ListItem item={item} key={key} searchTerm={this.state.searchTerm}/>)
-                            : <NoResultsItem/>
-                        }
-                    </ul>
-                </fieldset>
-            </div>
-        )
-    }
+    render = () => (
+        <div className="formContainer">
+            <fieldset id="location-fieldset">
+                <div className="pu-fts-container">
+                    <label htmlFor="ftsAutocomplete">Pick-up Location</label>
+                    {this.props.searching && <img alt="searching..." className="pu-fts-loader" src={loaderImage}/>}
+                    <input type="text" onChange={this.handleChange} 
+                        onFocus={this.onFocus} onBlur={this.onBlur}
+                        id="ftsAutocomplete" name="ftsAutocomplete"
+                        autoComplete="off" placeholder="city, airport, station, region, district…"
+                        aria-required="true" aria-autocomplete="list" aria-haspopup="true"/>
+                </div>
+                <ul className={`ui-autocomplete ui-corner-all ${this.state.focus ? "showSearchResults" : "hideSearchResults"}`} role="listbox" aria-activedescendant="ui-active-menuitem" tabIndex={0}>
+                    {this.props.searchResults.items.length > 0 ?
+                        this.props.searchResults.items.map((item, key) => <ListItem item={item} key={key} searchTerm={this.state.searchTerm}/>)
+                        : <NoResultsItem/>
+                    }
+                </ul>
+            </fieldset>
+        </div>
+    )
 }
 
 export default withRouter(connect(
