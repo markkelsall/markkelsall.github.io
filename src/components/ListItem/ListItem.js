@@ -11,7 +11,7 @@ export default class ListItem extends Component {
 
     render = () => {
         let type;
-        switch(this.props.item.location.placeType) {
+        switch(this.props.item.placeType) {
         case "A":
             type = 'airport';
             break;
@@ -31,7 +31,7 @@ export default class ListItem extends Component {
                     <span className={`${type} type`}>{type}</span>
                     <div className="location">
                         <em>{this.props.item.place}</em>
-                        <span className="address">{this.props.item.address['1']}</span>
+                        <span className="address">{this.props.item.name}</span>
                     </div>
                 </a>
             </li>

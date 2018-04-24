@@ -10,10 +10,14 @@ export const getPickUpLocations = searchTerm => {
             }
         });
         fetchPickUpLocations(searchTerm).then(response => {
+            let data = [];
+            if (response && response.results) {
+                data = response.results.docs;
+            }
             dispatch({
                 type: PICKUP_LOCATION_GET_LIST_RESPONSE,
                 payload: {
-                    items: response.data.records
+                    items: data
                 }
             });
         }).catch(error => {
